@@ -4,10 +4,16 @@ pipeline {
         maven 'M3'
     }
     stages {
-        stage('Example') {
+        stage('Create war') {
             steps {
                 sh 'mvn clean install'
             }
         }
+        stage('Docker build') {
+            steps {
+                 app = docker.build("shayki5/hello-world")
+            }
+        }
     }
+    
 }
