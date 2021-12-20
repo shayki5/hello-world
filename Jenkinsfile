@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Docker build') {
             steps {
-                 app = docker.build("shayki5/hello-world")
+                sh = 'docker build .'
             }
         }
     }
