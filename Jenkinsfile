@@ -8,9 +8,7 @@ node {
     }
   
     stage('Build war file') {
-        steps {
             sh 'mvn clean install package'
-        }
     }
 
     stage('Build image') {
