@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Docker build') {
             steps {
-                sh 'docker cp jenskins:/var/jenkins_home/workspace/Final Project/webapp/target/webapp.war /home/shayki/FinalProject/Artifacts'
+                sh 'docker cp jenkins:"/var/jenkins_home/workspace/Final Project/webapp/target/webapp.war" /home/shayki/FinalProject/Artifacts'
             }
         }
     }
